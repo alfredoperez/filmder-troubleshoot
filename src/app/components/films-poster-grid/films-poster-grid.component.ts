@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movie } from 'src/app/interfaces/models';
+import { Router } from '@angular/router';
+import { Movie } from 'src/app/interfaces/ListingMovies-models';
 
 @Component({
   selector: 'app-films-poster-grid',
@@ -10,9 +11,13 @@ export class FilmsPosterGridComponent implements OnInit {
  
   @Input() movies: Movie[] = [];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  showDetailFilm(movie: Movie){
+    this.router.navigate(['/film', movie.id]);
   }
 
 }

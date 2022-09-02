@@ -1,5 +1,5 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Movie, MoviesListingResponse } from 'src/app/interfaces/models';
+import { Movie } from 'src/app/interfaces/ListingMovies-models';
 import { FilmsService } from 'src/app/services/films.service';
 
 @Component({

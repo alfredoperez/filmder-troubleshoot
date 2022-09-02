@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, of, tap } from 'rxjs';
-import { Movie, MoviesListingResponse } from '../interfaces/models';
+import { Movie, MoviesListingResponse } from '../interfaces/ListingMovies-models';
+import { MovieDetailsResponse } from '../interfaces/movieDetails-models';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +45,10 @@ export class FilmsService {
     return this.http.get<MoviesListingResponse>(`${this.baseUrl}/search/movie`, {params}).pipe(
       map((response) => response.results)
     )
+  }
+
+  getFilmDetails(id: string):Observable<MovieDetailsResponse>{
+    return this.http.get<MovieDetailsResponse>(`${this.baseUrl}/movie/${id}`, {params: this.params});
   }
 
   resetFirstPage(){
