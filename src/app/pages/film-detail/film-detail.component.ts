@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MovieDetailsResponse } from 'src/app/interfaces/movieDetails-models';
+import { Cast, MovieDetailsResponse } from 'src/app/interfaces/movieDetails-models';
 import { FilmsService } from 'src/app/services/films.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { FilmsService } from 'src/app/services/films.service';
 export class FilmDetailComponent implements OnInit {
 
   public film!: MovieDetailsResponse;
+  public cast: Cast[] = [];
 
   constructor(
     private activatedRoute: ActivatedRoute, 
@@ -21,10 +22,26 @@ export class FilmDetailComponent implements OnInit {
   ngOnInit(): void {
     //desestructurin the params object
     const { id } = this.activatedRoute.snapshot.params;
-    console.log(id)
+
+    this.onGetFilmDetails(id);
+    this.onGetFilmCasting(id);
+  }
+
+  onGetFilmDetails(id: string){
     this.filmsService.getFilmDetails(id).subscribe(movieResponse => {
       console.log('movie details: ', movieResponse);
+      if (!movieResponse) {
+        this.router.navigate(['/home']);
+        return;
+      }
       this.film = movieResponse;
+    })
+  }
+
+  onGetFilmCasting(id: string){
+    this.filmsService.getFilmCasting(id).subscribe(cast => {
+      console.log({cast})
+      this.cast = cast;
     })
   }
 

@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, of, tap } from 'rxjs';
+import { catchError, map, Observable, of, tap } from 'rxjs';
 import { Movie, MoviesListingResponse } from '../interfaces/ListingMovies-models';
-import { MovieDetailsResponse } from '../interfaces/movieDetails-models';
+import { CreditsResponse, MovieDetailsResponse } from '../interfaces/movieDetails-models';
 
 @Injectable({
   providedIn: 'root'
@@ -47,8 +47,17 @@ export class FilmsService {
     )
   }
 
-  getFilmDetails(id: string):Observable<MovieDetailsResponse>{
-    return this.http.get<MovieDetailsResponse>(`${this.baseUrl}/movie/${id}`, {params: this.params});
+  getFilmDetails(id: string):Observable<any>{
+    return this.http.get<MovieDetailsResponse>(`${this.baseUrl}/movie/${id}`, {params: this.params}).pipe(
+      catchError((err: any) => of(null))
+    )
+  }
+
+  getFilmCasting(id: string):Observable<any>{
+    return this.http.get<CreditsResponse>(`${this.baseUrl}/movie/${id}/credits`, {params: this.params}).pipe(
+      map((response) => response.cast),
+      catchError((err: any) => of(null))
+    )
   }
 
   resetFirstPage(){
