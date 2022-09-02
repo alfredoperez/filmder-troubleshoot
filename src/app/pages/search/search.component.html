@@ -1,1 +1,8 @@
-<p>search works!</p>
+<h1>Search movies of: <small class="text-capitalize">{{textSearched}}</small></h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <app-films-poster-grid [movies]="movies" *ngIf="movies.length > 0"></app-films-poster-grid>
+  </div>
+</div>

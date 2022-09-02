@@ -23,7 +23,6 @@ export class FilmsService {
   }
 
   getMoviesListing():Observable<Movie[]>{
-    
     if (this.loading) {
       return of([]);
     }
@@ -37,5 +36,17 @@ export class FilmsService {
         this.loading = false;
       })
     );
+  }
+
+  searchFilms(text: string):Observable<Movie[]>{
+    const params = {...this.params, page: 1, query: text};
+
+    return this.http.get<MoviesListingResponse>(`${this.baseUrl}/search/movie`, {params}).pipe(
+      map((response) => response.results)
+    )
+  }
+
+  resetFirstPage(){
+    this.moviesListingPage = 1;
   }
 }
