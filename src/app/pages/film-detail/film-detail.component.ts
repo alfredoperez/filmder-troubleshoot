@@ -41,7 +41,7 @@ export class FilmDetailComponent implements OnInit {
   onGetFilmCasting(id: string){
     this.filmsService.getFilmCasting(id).subscribe(cast => {
       console.log({cast})
-      this.cast = cast;
+      this.cast = cast.filter(actor => actor.profile_path != null);
     })
   }
 
