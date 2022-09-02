@@ -4,11 +4,11 @@ import { Cast, MovieDetailsResponse } from 'src/app/interfaces/movieDetails-mode
 import { FilmsService } from 'src/app/services/films.service';
 
 @Component({
-  selector: 'app-film-detail',
-  templateUrl: './film-detail.component.html',
-  styleUrls: ['./film-detail.component.css']
+  selector: 'app-film-details',
+  templateUrl: './film-details.component.html',
+  styleUrls: ['./film-details.component.css']
 })
-export class FilmDetailComponent implements OnInit {
+export class FilmDetailsComponent implements OnInit {
 
   public film!: MovieDetailsResponse;
   public cast: Cast[] = [];
