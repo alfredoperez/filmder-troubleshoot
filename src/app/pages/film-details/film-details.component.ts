@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { combineLatest } from 'rxjs';
 import { Cast, MovieDetailsResponse } from 'src/app/interfaces/movieDetails-models';
 import { FilmsService } from 'src/app/services/films.service';
 
@@ -20,27 +21,23 @@ export class FilmDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //desestructurin the params object
+    //desestructuring the params object
     const { id } = this.activatedRoute.snapshot.params;
-
-    this.onGetFilmDetails(id);
-    this.onGetFilmCasting(id);
+    this.onGetFilmData(id);
   }
 
-  onGetFilmDetails(id: string){
-    this.filmsService.getFilmDetails(id).subscribe(movieResponse => {
-      console.log('movie details: ', movieResponse);
-      if (!movieResponse) {
+  onGetFilmData(id: string){
+    // using rxjs operator to collect the content of 2 or more observables and get it in an array
+    combineLatest([
+      this.filmsService.getFilmDetails(id),
+      this.filmsService.getFilmCasting(id)
+    ]).subscribe(([film, cast]) => {
+      console.log({film, cast});
+      if (!film) {
         this.router.navigate(['/home']);
         return;
       }
-      this.film = movieResponse;
-    })
-  }
-
-  onGetFilmCasting(id: string){
-    this.filmsService.getFilmCasting(id).subscribe(cast => {
-      console.log({cast})
+      this.film = film;
       this.cast = cast.filter(actor => actor.profile_path != null);
     })
   }
