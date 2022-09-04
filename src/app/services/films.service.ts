@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, of, tap } from 'rxjs';
+import { environment } from './../../environments/environment';
 import { Movie, MoviesListingResponse } from '../interfaces/listingMovies-models';
 import { Cast, CreditsResponse, MovieDetailsResponse } from '../interfaces/movieDetails-models';
 
