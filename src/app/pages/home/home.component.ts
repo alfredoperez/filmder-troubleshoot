@@ -1,5 +1,5 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Movie } from 'src/app/interfaces/ListingMovies-models';
+import { Movie } from 'src/app/interfaces/listingMovies-models';
 import { FilmsService } from 'src/app/services/films.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   onScroll(){
     const pos = (document.documentElement.scrollTop || document.body.scrollTop) + 1200;
     const max = (document.documentElement.scrollHeight || document.body.scrollHeight);
-    console.log({pos, max});
+    // console.log({pos, max});
 
     if (pos > max) {
       this.filmsService.getMoviesListing().subscribe((movies: Movie[]) => {

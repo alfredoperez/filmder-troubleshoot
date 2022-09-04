@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Movie } from 'src/app/interfaces/ListingMovies-models';
+import { Movie } from 'src/app/interfaces/listingMovies-models';
 
 @Component({
   selector: 'app-films-poster-grid',

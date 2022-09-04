@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, of, tap } from 'rxjs';
-import { Movie, MoviesListingResponse } from '../interfaces/ListingMovies-models';
+import { Movie, MoviesListingResponse } from '../interfaces/listingMovies-models';
 import { Cast, CreditsResponse, MovieDetailsResponse } from '../interfaces/movieDetails-models';
 
 @Injectable({
@@ -32,7 +32,6 @@ export class FilmsService {
     return this.http.get<MoviesListingResponse>(`${this.baseUrl}/movie/now_playing`, {params: this.params}).pipe(
       map((response) => response.results),
       tap(() => {
-        console.log('Llamada a api')
         this.moviesListingPage += 1;
         this.loading = false;
       })
