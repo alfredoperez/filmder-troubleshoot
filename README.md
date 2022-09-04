@@ -25,5 +25,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Convert JSON to interface
 Using the [page](https://app.quicktype.io/) and select typescript language and interfaces only.
 
-## slider using in the app
+## slider of the app
 Using the slider of this [page](https://swiperjs.com/get-started).
