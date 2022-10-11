@@ -1,3 +1,12 @@
 .swiper-wrapper{
   color: white;
 }
+
+.actor-link{
+  text-decoration: none;
+  color: white;
+}
+
+.actor-link:hover{
+  opacity: 0.6;
+}
