@@ -2,7 +2,7 @@ h3 {
   font-size: 15px;
 }
 
-.poster {
+.poster-image {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   margin: 5px;
@@ -13,7 +13,14 @@ h3 {
   margin-left: 12px;
 }
 
+.poster-title {
+  margin-top: 4px;
+}
+
 .poster-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
 }
 
