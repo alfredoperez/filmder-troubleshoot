@@ -30,7 +30,7 @@ export class FilmsService {
     }
     this.loading = true;
     //increment moviesListingPage in each get call
-    return this.http.get<MoviesListingResponse>(`${this.baseUrl}/movie/now_playing`, {params: this.params}).pipe(
+    return this.http.get<MoviesListingResponse>(`${this.baseUrl}/discover/movie`, {params: this.params}).pipe(
       map((response) => response.results),
       tap(() => {
         this.moviesListingPage += 1;
