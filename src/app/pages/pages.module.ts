@@ -5,7 +5,6 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
 import { SearchComponent } from './search/search.component';
 import { ComponentsModule } from '../components/components.module';
 import { PipesModule } from '../pipes/pipes.module';
-import { RatingModule } from 'ng-starrating';
 
 
 
@@ -19,7 +18,6 @@ import { RatingModule } from 'ng-starrating';
     CommonModule,
     ComponentsModule,
     PipesModule,
-    RatingModule
   ]
 })
 export class PagesModule { }
