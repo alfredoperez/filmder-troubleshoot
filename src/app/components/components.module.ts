@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { StarRatingModule } from 'angular-star-rating';
+import { NavbarComponent } from './navbar/navbar.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { FilmsPosterGridComponent } from './films-poster-grid/films-poster-grid.component';
 import { PipesModule } from '../pipes/pipes.module';
@@ -19,7 +20,8 @@ import { CastSlideshowComponent } from './cast-slideshow/cast-slideshow.componen
   imports: [
     CommonModule,
     RouterModule,
-    PipesModule
+    PipesModule,
+    StarRatingModule.forRoot()
   ],
   exports: [
     NavbarComponent,

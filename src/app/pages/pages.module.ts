@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StarRatingModule } from 'angular-star-rating';
 import { HomeComponent } from './home/home.component';
 import { FilmDetailsComponent } from './film-details/film-details.component';
 import { SearchComponent } from './search/search.component';
@@ -18,6 +19,7 @@ import { PipesModule } from '../pipes/pipes.module';
     CommonModule,
     ComponentsModule,
     PipesModule,
+    StarRatingModule.forRoot()
   ]
 })
 export class PagesModule { }

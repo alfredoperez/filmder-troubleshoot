@@ -11,13 +11,13 @@
     <h3>{{film.title}}</h3>
     <div class="row mb-3">
       <div class="col">
-          <!-- <star-rating 
-          [value]="film.vote_average" 
-          [totalstars]="10" 
-          checkedcolor="yellow" 
-          uncheckedcolor="grey" 
-          size="14px" 
-          [readonly]="false"></star-rating> -->
+        <star-rating 
+          staticColor="positive"
+          [starType]="'svg'" 
+          [numOfStars]="10"
+          [showHalfStars]="true"
+          [rating]="film.vote_average"
+          [readOnly]="true"></star-rating>
       </div>
       <div class="col">
         {{ film.vote_average | number:'1.1-2' }}
