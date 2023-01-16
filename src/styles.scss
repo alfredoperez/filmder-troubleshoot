@@ -1,5 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* star-rating css */
 @import '~css-star-rating/scss/star-rating';
+
+.rating {
+  justify-content: start;
+}
+/* star-rating css */
 
 body {
   background-color: #14161E;

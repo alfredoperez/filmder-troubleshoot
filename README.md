@@ -30,3 +30,6 @@ Using the slider of this [page](https://swiperjs.com/get-started).
 
 ## Deploy app
 Run the command `ng build --output-path docs --base-href filmder` to get the build and push to the repository to update the app
+
+## Libraries
+star-rating library [documentation](https://github.com/BioPhoton/angular-star-rating).
