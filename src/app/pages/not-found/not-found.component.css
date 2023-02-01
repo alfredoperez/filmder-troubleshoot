@@ -1,0 +1,26 @@
+.not-found-container{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-description{
+  margin: 1rem;
+  text-align: justify;
+}
+
+.not-found-title{
+  font-weight: bold;
+}
+
+.not-found-image{
+  width: 350px;
+  height: auto
+}
+
+span{
+  font-weight: bolder;
+  color: rgb(24 161 106);
+}
