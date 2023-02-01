@@ -17,7 +17,11 @@ const routes: Routes = [
     loadChildren: ()=> import('./pages/search/search.module').then(m => m.SearchModule) 
   },
   { path: '', redirectTo:'/home', pathMatch: 'full' },
-  { path: '**', component: HomeComponent },
+  { 
+    path: '**', 
+    loadComponent: ()=> import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent)
+    //component: NotFoundComponent 
+  },
 ];
 
 @NgModule({
