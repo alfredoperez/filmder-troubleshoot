@@ -17,10 +17,15 @@ const routes: Routes = [
     title:'Search Film', 
     loadChildren: ()=> import('./pages/search/search.module').then(m => m.SearchModule) 
   },
+  { 
+    path: 'not-found', 
+    title:'Not Found', 
+    loadComponent: ()=> import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent)
+  },
   { path: '', redirectTo:'/home', pathMatch: 'full' },
   { 
     path: '**', 
-    component: NotFoundComponent
+    redirectTo: '/not-found'
     //loadComponent: ()=> import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent)
   },
 ];
