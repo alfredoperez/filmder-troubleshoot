@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Cast } from 'src/app/interfaces/movieDetails-models';
 import Swiper from 'swiper';
 
@@ -13,7 +14,7 @@ export class CastSlideshowComponent implements AfterViewInit {
 
   mySwiper!: Swiper;
 
-  constructor() {}
+  constructor(public translate: TranslateService) {}
   
   ngAfterViewInit(): void {
     this.mySwiper = new Swiper('.swiper', {

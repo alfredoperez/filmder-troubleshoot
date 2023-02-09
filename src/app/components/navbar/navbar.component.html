@@ -9,14 +9,27 @@
               (keyup.enter)="searchFilm(txtSearch.value)"
                class="form-control me-2"
                type="search" 
-               placeholder="Search movie" 
+               placeholder="{{ 'NAVBAR_INPUT' | translate }}" 
                aria-label="Search">
         <button 
               (click)="searchFilm(txtSearch.value)"
               class="search-button" 
               type="submit">
-              Search
+              {{ 'NAVBAR_SEARCH' | translate }}
         </button>
+        <li class="multilanguage-container">
+          <select
+            class="form-control multilanguage-select"
+            #selectedLang
+            (change)="switchLang(selectedLang.value)">
+            <option
+              *ngFor="let language of translate.getLangs()"
+              [value]="language"
+              [selected]="language === translate.currentLang">
+              {{ language | flag }}
+            </option>
+          </select>
+        </li>
       </div>
     </div>
 

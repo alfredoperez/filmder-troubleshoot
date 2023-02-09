@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,12 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    public translate: TranslateService
+  ) { 
+    translate.addLangs(['en', 'es'])
+  }
 
   ngOnInit(): void {
   }
@@ -20,7 +26,10 @@ export class NavbarComponent implements OnInit {
       return
     }
     this.router.navigate(['/search', txtSearch]);
+  }
 
+  switchLang(lang: string) {
+    this.translate.use(lang);
   }
 
 }
