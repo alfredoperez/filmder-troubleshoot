@@ -17,6 +17,19 @@
               type="submit">
               Search
         </button>
+        <li class="multilanguage-select">
+          <select
+            class="form-control"
+            #selectedLang
+            (change)="switchLang(selectedLang.value)">
+            <option
+              *ngFor="let language of translate.getLangs()"
+              [value]="language"
+              [selected]="language === translate.currentLang">
+              {{ language }}
+            </option>
+          </select>
+        </li>
       </div>
     </div>
 
