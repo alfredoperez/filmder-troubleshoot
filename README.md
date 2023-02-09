@@ -32,8 +32,20 @@ Using the slider of this [page](https://swiperjs.com/get-started).
 Run the command `ng build --output-path docs --base-href filmder` to get the build and push to the repository to update the app
 
 ## Libraries
+<<<<<<< Updated upstream
 star-rating library [documentation](https://github.com/BioPhoton/angular-star-rating) 
 and customize [styles](https://github.com/BioPhoton/angular-star-rating/wiki/Customizing-Styles)
+<<<<<<< Updated upstream
 
 ## API movies documentation
 https://developers.themoviedb.org/3/getting-started/introduction
+=======
+=======
+- star-rating library [documentation](https://github.com/BioPhoton/angular-star-rating) and customize [styles](https://github.com/BioPhoton/angular-star-rating/wiki/Customizing-Styles)
+
+- translate library [documentation](https://github.com/BioPhoton/angular-star-rating) 
+
+## API movies documentation
+https://developers.themoviedb.org/3/getting-started/introduction
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
