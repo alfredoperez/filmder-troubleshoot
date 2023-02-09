@@ -22,6 +22,14 @@
 .container-fluid{
   justify-content: center;
 }
+
+.multilanguage-container {
+ display: grid;
+} 
+
+.multilanguage-select {
+  margin: 0 0.5rem;
+}
  
 .search-button {
   --green: #1BFD9C;

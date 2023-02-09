@@ -15,11 +15,11 @@
               (click)="searchFilm(txtSearch.value)"
               class="search-button" 
               type="submit">
-              Search
+              {{ 'NAVBAR_SEARCH' | translate }}
         </button>
-        <li class="multilanguage-select">
+        <li class="multilanguage-container">
           <select
-            class="form-control"
+            class="form-control multilanguage-select"
             #selectedLang
             (change)="switchLang(selectedLang.value)">
             <option
