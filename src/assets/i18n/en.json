@@ -2,5 +2,7 @@
   "NAVBAR_SEARCH": "Search",
   "NAVBAR_INPUT": "Search movie",
 
-  "HOME_TITLE": "Trending Movies"
+  "HOME_TITLE": "Trending Movies",
+
+  "FILM-DETAILS_BACK": "Back to Home"
 }

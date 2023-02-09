@@ -39,7 +39,8 @@ import { CastSlideshowComponent } from './cast-slideshow/cast-slideshow.componen
     NavbarComponent,
     SlideshowComponent,
     FilmsPosterGridComponent,
-    CastSlideshowComponent
+    CastSlideshowComponent,
+    TranslateModule
   ]
 })
 export class ComponentsModule { }

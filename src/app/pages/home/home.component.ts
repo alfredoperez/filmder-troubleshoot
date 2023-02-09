@@ -11,9 +11,9 @@ import { FilmsService } from 'src/app/services/films.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
+  private subscriptions: Subscription[] = [];
   movies: Movie[] = [];
   moviesSlideshow: Movie[] = [];
-  private subscriptions: Subscription[] = [];
 
   @HostListener('window:scroll', ['$event'])
   onScroll(){
