@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { combineLatest, Subscription } from 'rxjs';
@@ -10,7 +10,7 @@ import { FilmsService } from 'src/app/services/films.service';
   templateUrl: './film-details.component.html',
   styleUrls: ['./film-details.component.css']
 })
-export class FilmDetailsComponent implements OnInit {
+export class FilmDetailsComponent implements OnInit, OnDestroy {
 
   private subscriptions: Subscription[] = [];
   public film!: MovieDetailsResponse;
