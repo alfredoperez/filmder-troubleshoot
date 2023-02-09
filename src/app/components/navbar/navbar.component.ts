@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
     private router: Router,
     public translate: TranslateService
   ) { 
-    translate.addLangs(['en_US', 'es_ES'])
+    translate.addLangs(['en', 'es'])
   }
 
   ngOnInit(): void {

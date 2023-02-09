@@ -4,6 +4,7 @@ import { catchError, map, Observable, of, tap } from 'rxjs';
 import { environment } from './../../environments/environment';
 import { Movie, MoviesListingResponse } from '../interfaces/listingMovies-models';
 import { Cast, CreditsResponse, MovieDetailsResponse } from '../interfaces/movieDetails-models';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +15,26 @@ export class FilmsService {
   private moviesListingPage = 1;
   public loading: boolean = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private translate: TranslateService) {}
 
   get params() {
     return {
       api_key: environment.API_KEY,
-      //TODO change from a variable that get the language string (default is english language)
-      // language: 'es-ES', 
+      language: this.setLangParam(this.translate.currentLang), 
       page: this.moviesListingPage.toString()
+    }
+  }
+
+  setLangParam(currentLang: string): string {
+    switch (currentLang) {
+      case 'en':
+        return 'en-US'
+    
+      case 'es':
+        return 'es-ES'
+    
+      default:
+        return 'en-US'
     }
   }
 

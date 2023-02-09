@@ -1,8 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 const COUNTRIES: any = {
-  EN_US: 'GB',
-  ES_ES: 'ES',
+  EN: 'GB',
+  ES: 'ES',
   FR: 'FR',
 };
 

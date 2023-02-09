@@ -12,17 +12,17 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
-import { HomeModule } from './pages/home/home.module';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ComponentsModule,
-    HomeModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
@@ -37,6 +37,6 @@ import { HomeModule } from './pages/home/home.module';
 })
 export class AppModule { 
   constructor(translate: TranslateService) {
-    translate.setDefaultLang('en_US');
+    translate.setDefaultLang('en');
   }
 }
