@@ -29,6 +29,14 @@
 
 .multilanguage-select {
   margin: 0 0.5rem;
+  background-color: #14161e;
+  border-color: #18a06a;
+  color: #fff;
+}
+
+.multilanguage-select:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
  
 .search-button {

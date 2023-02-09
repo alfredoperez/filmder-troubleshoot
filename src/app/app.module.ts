@@ -37,6 +37,6 @@ import { HomeModule } from './pages/home/home.module';
 })
 export class AppModule { 
   constructor(translate: TranslateService) {
-    translate.setDefaultLang('en-US');
+    translate.setDefaultLang('en_US');
   }
 }
