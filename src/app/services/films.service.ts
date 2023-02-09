@@ -19,7 +19,8 @@ export class FilmsService {
   get params() {
     return {
       api_key: environment.API_KEY,
-      language: 'es-ES',
+      //TODO change from a variable that get the language string (default is english language)
+      // language: 'es-ES', 
       page: this.moviesListingPage.toString()
     }
   }
