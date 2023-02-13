@@ -5,5 +5,8 @@
   "HOME_TITLE": "Películas tendencia",
   "SEARCH_TITLE": "Buscar películas de:",
 
-  "FILM-DETAILS_BACK": "Volver al Inicio"
+  "FILM-DETAILS_BACK": "Volver al Inicio",
+
+  "NOT-FOUND_TITLE": "Esta página está perdida en el <span>espacio</span>",
+  "NOT-FOUND_DESC": "Pensaste que <span>esta misión</span> a la luna sería algo rápido de seis meses. Tu vecino se ofreció a cuidar a tu perro. Tu profesor de matemáticas de secundaria quedó impresionado. Una vez dijo que no llegarías a nada. Seguro que se lo demostraste. Pero ahora estás aquí, a quince metros de tu nave espacial sin forma de <span>regresar</span>. Tu perro estará muy triste. Tu profesor de matemáticas será tan presumido. Bastante <span>devastador</span>."
 }

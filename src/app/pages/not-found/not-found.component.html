@@ -1,14 +1,8 @@
 <div class="not-found-container">
   <img class="not-found-image" src="assets/not-found.png" alt="not-found-image">
-  <h1 class="not-found-title">This Page is Lost in <span>Space</span></h1>
-  <p class="not-found-description">
-    You thought <span>this mission</span> to the moon would be a quick six month thing. 
-    Your neighbor offered to look after your dog. Your high school math teacher was impressed. 
-    He once said you wouldn’t amount to anything.You sure showed him. But now here you are, 
-    fifty feet from your spaceship with no way to <span>get back</span>. Your dog will be so sad. Your math teacher will be so smug. 
-    Pretty <span>devastating</span>.
-  </p>
+  <h1 class="not-found-title" [innerHTML]="'NOT-FOUND_TITLE' | translate"></h1>
+  <p class="not-found-description" [innerHTML]="'NOT-FOUND_DESC' | translate"></p>
   <button class="not-found-button" (click)="backHome()">
-    Back to Home
+    {{ 'FILM-DETAILS_BACK' | translate }}
   </button>
 </div>

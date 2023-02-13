@@ -20,11 +20,6 @@
   height: auto
 }
 
-span{
-  font-weight: bolder;
-  color: rgb(24 161 106);
-}
-
 .not-found-button {
   --green: #1BFD9C;
   font-size: 15px;

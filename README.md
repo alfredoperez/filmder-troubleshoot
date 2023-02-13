@@ -34,7 +34,7 @@ Run the command `ng build --output-path docs --base-href filmder` to get the bui
 ## Libraries
 - star-rating library [documentation](https://github.com/BioPhoton/angular-star-rating) and customize [styles](https://github.com/BioPhoton/angular-star-rating/wiki/Customizing-Styles)
 
-- translate library [documentation](https://github.com/BioPhoton/angular-star-rating) 
+- translate library [documentation](https://github.com/ngx-translate/core) 
 
 ## API movies documentation
 https://developers.themoviedb.org/3/getting-started/introduction
