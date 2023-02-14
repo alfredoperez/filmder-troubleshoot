@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-
-// import { LoaderService } from '@services';
-
+import { LoaderService } from 'src/app/services/loader.service';
 
 @Component({
   selector: 'app-loader',
@@ -12,12 +10,9 @@ import { Subject } from 'rxjs';
 
 export class LoaderComponent implements OnInit {
 
+  isLoading: Subject<boolean> = this.loaderService.isLoading;
 
-  // isLoading: Subject<boolean> = this.loaderService.isLoading;
-
-  constructor (
-    // private loaderService: LoaderService
-  ) { }
+  constructor(private loaderService: LoaderService) {}
 
   ngOnInit(): void { }
 
