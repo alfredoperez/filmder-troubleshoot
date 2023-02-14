@@ -1,6 +1,6 @@
 # FilmsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.
 
 ## Development server
 
@@ -25,13 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Convert JSON to interface
 Using the [page](https://app.quicktype.io/) and select typescript language and interfaces only.
 
-## slider of the app
-Using the slider of this [page](https://swiperjs.com/get-started).
-
 ## Deploy app
 Run the command `ng build --output-path docs --base-href filmder` to get the build and push to the repository to update the app
 
 ## Libraries
+- Using the slider of this [page](https://swiperjs.com/get-started).
+
 - star-rating library [documentation](https://github.com/BioPhoton/angular-star-rating) and customize [styles](https://github.com/BioPhoton/angular-star-rating/wiki/Customizing-Styles)
 
 - translate library [documentation](https://github.com/ngx-translate/core) 
