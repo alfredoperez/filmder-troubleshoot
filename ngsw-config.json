@@ -26,5 +26,19 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "films",
+      "urls": [
+        "https://api.themoviedb.org/3/discover/movie?api_key=406ac682d93f72cd6bc327be30109839&language=en-US&page=1"
+      ],
+      "cacheConfig": {
+        "maxSize": 1,
+        "maxAge": "1d",
+        "timeout": "10s",
+        "strategy": "freshness"
+      }
+    }
   ]
 }
