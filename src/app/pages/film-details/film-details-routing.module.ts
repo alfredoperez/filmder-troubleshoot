@@ -3,12 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { FilmDetailsComponent } from './film-details.component';
 
-const routes: Routes = [
-  { path: '', component: FilmDetailsComponent },
-];
+const routes: Routes = [{ path: '', component: FilmDetailsComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class FilmDetailsRoutingModule {}

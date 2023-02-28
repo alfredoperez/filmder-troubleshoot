@@ -7,15 +7,13 @@ import { StarRatingModule } from 'angular-star-rating';
 import { PipesModule } from 'src/app/pipes/pipes.module';
 
 @NgModule({
-  declarations: [
-    FilmDetailsComponent
-  ],
-  imports: [ 
+  declarations: [FilmDetailsComponent],
+  imports: [
     CommonModule,
     ComponentsModule,
     FilmDetailsRoutingModule,
     PipesModule,
-    StarRatingModule.forRoot()
+    StarRatingModule.forRoot(),
   ],
   exports: [],
   providers: [],

@@ -1,20 +1,23 @@
 <div class="row">
-  <div class="col-12 col-md-4 col-lg-3 mb-5 poster-card" *ngFor="let movie of movies" (click)="showDetailFilm(movie)">
-    <img [src]="movie.poster_path | poster" class="img-fluid poster-image">
+  <div
+    class="col-12 col-md-4 col-lg-3 mb-5 poster-card"
+    *ngFor="let movie of movies"
+    (click)="showDetailFilm(movie)">
+    <img [src]="movie.poster_path | poster" class="img-fluid poster-image" />
     <div class="poster-description">
-      <h3 class="poster-title">{{movie.title}}</h3>
+      <h3 class="poster-title">{{ movie.title }}</h3>
       <div class="row">
         <div class="col-10">
-          <star-rating 
+          <star-rating
             staticColor="positive"
-            [starType]="'svg'" 
+            [starType]="'svg'"
             [numOfStars]="10"
             [showHalfStars]="true"
             [rating]="movie.vote_average"
             [readOnly]="true"></star-rating>
         </div>
         <div class="col-2">
-          {{ movie.vote_average | number:'1.1-2'}}
+          {{ movie.vote_average | number : '1.1-2' }}
         </div>
       </div>
     </div>

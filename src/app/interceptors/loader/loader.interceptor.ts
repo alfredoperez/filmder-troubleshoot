@@ -4,18 +4,14 @@ import { LoaderService } from 'src/app/services/loader.service';
 import { finalize } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoaderInterceptor implements HttpInterceptor {
-
-  constructor (public loaderService: LoaderService) {}
+  constructor(public loaderService: LoaderService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    
     this.loaderService.show();
 
-    return next.handle(req).pipe(
-      finalize(() => this.loaderService.hide())
-    )
+    return next.handle(req).pipe(finalize(() => this.loaderService.hide()));
   }
 }

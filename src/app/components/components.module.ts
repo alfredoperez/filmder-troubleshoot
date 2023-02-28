@@ -13,15 +13,13 @@ import { PipesModule } from '../pipes/pipes.module';
 import { CastSlideshowComponent } from './cast-slideshow/cast-slideshow.component';
 import { LoaderComponent } from './loader/loader.component';
 
-
-
 @NgModule({
   declarations: [
     NavbarComponent,
     SlideshowComponent,
     FilmsPosterGridComponent,
     CastSlideshowComponent,
-    LoaderComponent
+    LoaderComponent,
   ],
   imports: [
     CommonModule,
@@ -43,7 +41,7 @@ import { LoaderComponent } from './loader/loader.component';
     FilmsPosterGridComponent,
     CastSlideshowComponent,
     LoaderComponent,
-    TranslateModule
-  ]
+    TranslateModule,
+  ],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

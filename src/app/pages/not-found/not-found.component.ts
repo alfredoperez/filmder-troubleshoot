@@ -7,13 +7,12 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule],
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.css']
+  styleUrls: ['./not-found.component.css'],
 })
 export class NotFoundComponent {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  backHome(){
+  backHome() {
     this.router.navigate(['/home']);
   }
 }

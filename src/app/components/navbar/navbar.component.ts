@@ -5,22 +5,18 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-
-  constructor(
-    private router: Router,
-    public translate: TranslateService
-  ) { 
-    translate.addLangs(['en', 'es'])
+  constructor(private router: Router, public translate: TranslateService) {
+    translate.addLangs(['en', 'es']);
   }
 
-  searchFilm(txtSearch: string){
+  searchFilm(txtSearch: string) {
     txtSearch = txtSearch.trim();
 
     if (txtSearch.length === 0) {
-      return
+      return;
     }
     this.router.navigate(['/search', txtSearch]);
   }
@@ -28,5 +24,4 @@ export class NavbarComponent {
   switchLang(lang: string) {
     this.translate.use(lang);
   }
-
 }
