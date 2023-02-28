@@ -2,9 +2,11 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { HomeComponent } from './pages/home/home.component';
+import { AuthComponent } from './pages/auth/auth.component';
 
 const routes: Routes = [
   { path: 'home', title:'Home', component: HomeComponent },
+  { path: 'auth', title:'Authentication', component: AuthComponent },
   { 
     path: 'film/:id', 
     title:'Film Details',
