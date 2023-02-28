@@ -1,21 +1,19 @@
 <nav class="navbar navbar-expand-sm">
   <div class="container-fluid">
-    <img class="navbar-img" src="./assets/navbar-icon.png" alt="navbar-img">
-    <a class="navbar-brand" [routerLink]="['/home']" >Movies Finder</a>
+    <img class="navbar-img" src="./assets/navbar-icon.png" alt="navbar-img" />
+    <a class="navbar-brand" [routerLink]="['/home']">Movies Finder</a>
 
     <div class="navbar-collapse">
       <div class="d-flex">
-        <input #txtSearch 
-              (keyup.enter)="searchFilm(txtSearch.value)"
-               class="form-control me-2"
-               type="search" 
-               placeholder="{{ 'NAVBAR_INPUT' | translate }}" 
-               aria-label="Search">
-        <button 
-              (click)="searchFilm(txtSearch.value)"
-              class="search-button" 
-              type="submit">
-              {{ 'NAVBAR_SEARCH' | translate }}
+        <input
+          #txtSearch
+          (keyup.enter)="searchFilm(txtSearch.value)"
+          class="form-control me-2"
+          type="search"
+          placeholder="{{ 'NAVBAR_INPUT' | translate }}"
+          aria-label="Search" />
+        <button (click)="searchFilm(txtSearch.value)" class="search-button" type="submit">
+          {{ 'NAVBAR_SEARCH' | translate }}
         </button>
         <li class="multilanguage-container">
           <select
@@ -32,6 +30,5 @@
         </li>
       </div>
     </div>
-
   </div>
 </nav>

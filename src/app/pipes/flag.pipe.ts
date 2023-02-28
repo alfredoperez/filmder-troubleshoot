@@ -12,7 +12,7 @@ export class FlagPipe implements PipeTransform {
     const codePoints = COUNTRIES[country.toUpperCase()].replace(/./g, (char: any) =>
       String.fromCodePoint(127397 + char.charCodeAt())
     );
-    console.log(codePoints)
+    console.log(codePoints);
     return codePoints;
   }
 }

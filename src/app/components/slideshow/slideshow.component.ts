@@ -5,15 +5,14 @@ import Swiper from 'swiper';
 @Component({
   selector: 'app-slideshow',
   templateUrl: './slideshow.component.html',
-  styleUrls: ['./slideshow.component.css']
+  styleUrls: ['./slideshow.component.css'],
 })
 export class SlideshowComponent implements OnInit, AfterViewInit {
-  
   @Input() movies: Movie[] = [];
 
   mySwiper!: Swiper;
 
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit(): void {
     this.mySwiper = new Swiper('.swiper', {
@@ -22,15 +21,14 @@ export class SlideshowComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    console.log('movies', this.movies)
+    console.log('movies', this.movies);
   }
 
-  onSlidePrevious(){
+  onSlidePrevious() {
     this.mySwiper.slidePrev();
   }
 
-  onSlideNext(){
+  onSlideNext() {
     this.mySwiper.slideNext();
   }
-
 }

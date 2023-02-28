@@ -3,12 +3,16 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide" 
-         *ngFor="let movie of movies"
-         [ngStyle]="{'background-size': 'cover', 'background-image': 'url(https://image.tmdb.org/t/p/w500/' + movie.backdrop_path + ')' }"> 
+    <div
+      class="swiper-slide"
+      *ngFor="let movie of movies"
+      [ngStyle]="{
+        'background-size': 'cover',
+        'background-image': 'url(https://image.tmdb.org/t/p/w500/' + movie.backdrop_path + ')'
+      }">
       <div class="movie-description">
-        <h3>{{movie.title}}</h3>
-        <p>{{movie.overview | slice:0:160}}...</p>
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.overview | slice : 0 : 160 }}...</p>
       </div>
     </div>
   </div>
@@ -16,5 +20,4 @@
   <!-- If we need navigation buttons -->
   <div (click)="onSlidePrevious()" class="swiper-button-prev"></div>
   <div (click)="onSlideNext()" class="swiper-button-next"></div>
-  
 </div>

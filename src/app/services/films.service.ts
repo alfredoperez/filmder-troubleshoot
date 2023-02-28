@@ -7,10 +7,9 @@ import { Cast, CreditsResponse, MovieDetailsResponse } from '../interfaces/movie
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FilmsService {
-
   private baseUrl: string = 'https://api.themoviedb.org/3';
   private moviesListingPage = 1;
   public loading: boolean = false;
@@ -20,61 +19,65 @@ export class FilmsService {
   get params() {
     return {
       api_key: environment.API_KEY,
-      language: this.setLangParam(this.translate.currentLang), 
-      page: this.moviesListingPage.toString()
-    }
+      language: this.setLangParam(this.translate.currentLang),
+      page: this.moviesListingPage.toString(),
+    };
   }
 
   setLangParam(currentLang: string): string {
     switch (currentLang) {
       case 'en':
-        return 'en-US'
-    
+        return 'en-US';
+
       case 'es':
-        return 'es-ES'
-    
+        return 'es-ES';
+
       default:
-        return 'en-US'
+        return 'en-US';
     }
   }
 
-  getMoviesListing():Observable<Movie[]>{
+  getMoviesListing(): Observable<Movie[]> {
     if (this.loading) {
       return of([]);
     }
     this.loading = true;
     //increment moviesListingPage in each get call
-    return this.http.get<MoviesListingResponse>(`${this.baseUrl}/discover/movie`, {params: this.params}).pipe(
-      map((response) => response.results),
-      tap(() => {
-        this.moviesListingPage += 1;
-        this.loading = false;
-      })
-    );
+    return this.http
+      .get<MoviesListingResponse>(`${this.baseUrl}/discover/movie`, { params: this.params })
+      .pipe(
+        map((response) => response.results),
+        tap(() => {
+          this.moviesListingPage += 1;
+          this.loading = false;
+        })
+      );
   }
 
-  searchFilms(text: string):Observable<Movie[]>{
-    const params = {...this.params, page: 1, query: text};
+  searchFilms(text: string): Observable<Movie[]> {
+    const params = { ...this.params, page: 1, query: text };
 
-    return this.http.get<MoviesListingResponse>(`${this.baseUrl}/search/movie`, {params}).pipe(
-      map((response) => response.results)
-    )
+    return this.http
+      .get<MoviesListingResponse>(`${this.baseUrl}/search/movie`, { params })
+      .pipe(map((response) => response.results));
   }
 
-  getFilmDetails(id: string):Observable<any>{
-    return this.http.get<MovieDetailsResponse>(`${this.baseUrl}/movie/${id}`, {params: this.params}).pipe(
-      catchError((err: any) => of(null))
-    )
+  getFilmDetails(id: string): Observable<any> {
+    return this.http
+      .get<MovieDetailsResponse>(`${this.baseUrl}/movie/${id}`, { params: this.params })
+      .pipe(catchError((err: any) => of(null)));
   }
 
-  getFilmCasting(id: string):Observable<Cast[]>{
-    return this.http.get<CreditsResponse>(`${this.baseUrl}/movie/${id}/credits`, {params: this.params}).pipe(
-      map((response) => response.cast),
-      catchError((err: any) => of([]))
-    )
+  getFilmCasting(id: string): Observable<Cast[]> {
+    return this.http
+      .get<CreditsResponse>(`${this.baseUrl}/movie/${id}/credits`, { params: this.params })
+      .pipe(
+        map((response) => response.cast),
+        catchError((err: any) => of([]))
+      );
   }
 
-  resetFirstPage(){
+  resetFirstPage() {
     this.moviesListingPage = 1;
   }
 }

@@ -1,23 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie } from 'src/app/interfaces/listingMovies-models';
 
 @Component({
   selector: 'app-films-poster-grid',
   templateUrl: './films-poster-grid.component.html',
-  styleUrls: ['./films-poster-grid.component.css']
+  styleUrls: ['./films-poster-grid.component.css'],
 })
-export class FilmsPosterGridComponent implements OnInit {
- 
+export class FilmsPosterGridComponent {
   @Input() movies: Movie[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
-
-  showDetailFilm(movie: Movie){
+  showDetailFilm(movie: Movie) {
     this.router.navigate(['/film', movie.id]);
   }
-
 }
