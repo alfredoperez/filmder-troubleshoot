@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -7,16 +7,13 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   constructor(
     private router: Router,
     public translate: TranslateService
   ) { 
     translate.addLangs(['en', 'es'])
-  }
-
-  ngOnInit(): void {
   }
 
   searchFilm(txtSearch: string){
