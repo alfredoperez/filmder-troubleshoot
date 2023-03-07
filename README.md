@@ -47,5 +47,6 @@ https://developers.themoviedb.org/3/getting-started/introduction
 - Automatic linter using Eslint + Prettier + Husky
 - Service-worker to have content offline
 - Multilanguage using ngx-translate
+- Angular Universal to have server side rendering (remember not works localStorage logic in server)
 - Standalone components (available Angular 13+)
 - Loader interceptor in all http requests
