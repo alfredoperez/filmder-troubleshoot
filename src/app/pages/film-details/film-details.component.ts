@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { combineLatest, Subscription } from 'rxjs';
+import { fadeIn } from 'src/app/animations/animations';
 import { Cast, MovieDetailsResponse } from 'src/app/interfaces/movieDetails-models';
 import { FilmsService } from 'src/app/services/films.service';
 
@@ -9,6 +10,7 @@ import { FilmsService } from 'src/app/services/films.service';
   selector: 'app-film-details',
   templateUrl: './film-details.component.html',
   styleUrls: ['./film-details.component.css'],
+  animations: [fadeIn],
 })
 export class FilmDetailsComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
