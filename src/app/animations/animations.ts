@@ -87,3 +87,13 @@ export const smoothCollapse = [
     transition('final=>initial', animate('750ms')),
   ]),
 ];
+
+// animation to route components
+export const routeAnimation = trigger('routeFadeState', [
+  transition(':enter', [
+    style({
+      opacity: 0,
+    }),
+    animate(1100),
+  ]),
+]);
