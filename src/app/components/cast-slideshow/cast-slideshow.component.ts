@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { listAnimation } from 'src/app/animations/animations';
 import { Cast } from 'src/app/interfaces/movieDetails-models';
 import Swiper from 'swiper';
 
@@ -7,6 +8,7 @@ import Swiper from 'swiper';
   selector: 'app-cast-slideshow',
   templateUrl: './cast-slideshow.component.html',
   styleUrls: ['./cast-slideshow.component.css'],
+  animations: [listAnimation],
 })
 export class CastSlideshowComponent implements AfterViewInit {
   @Input() cast: Cast[] = [];

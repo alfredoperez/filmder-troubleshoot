@@ -1,7 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { combineLatest, Subscription } from 'rxjs';
+import { routeAnimation } from 'src/app/animations/animations';
 import { Cast, MovieDetailsResponse } from 'src/app/interfaces/movieDetails-models';
 import { FilmsService } from 'src/app/services/films.service';
 
@@ -9,8 +10,10 @@ import { FilmsService } from 'src/app/services/films.service';
   selector: 'app-film-details',
   templateUrl: './film-details.component.html',
   styleUrls: ['./film-details.component.css'],
+  animations: [routeAnimation],
 })
 export class FilmDetailsComponent implements OnInit, OnDestroy {
+  @HostBinding('@routeFadeState') routeAnimate = true;
   private subscriptions: Subscription[] = [];
   public film!: MovieDetailsResponse;
   public cast: Cast[] = [];
