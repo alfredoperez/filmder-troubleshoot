@@ -1,17 +1,24 @@
-/* star-rating css */
+/* star-rating css start */
 @import '~css-star-rating/scss/star-rating';
 
 .rating {
   justify-content: start;
   overflow: hidden;
 }
-/* star-rating css */
+/* star-rating css end */
 
 body {
-  background-color: #14161E;
+  background-color: #14161e;
+  &.light-theme {
+    background-color: #c3c2c287;
+  }
 }
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 200;
   color: white;
 }
@@ -25,7 +32,7 @@ p {
   color: white;
 }
 
-hr{
+hr {
   color: white;
 }
 
@@ -35,8 +42,8 @@ hr{
 }
 
 .btn-outline-success {
-  border-color: #bd4c5f !important;;
-  color: #bd4c5f !important;;
+  border-color: #bd4c5f !important;
+  color: #bd4c5f !important;
 }
 
 .btn-outline-success:hover {

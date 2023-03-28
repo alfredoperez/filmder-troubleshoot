@@ -1,8 +1,25 @@
 <nav class="navbar navbar-expand-sm">
   <div class="container-fluid">
-    <img class="navbar-img" src="./assets/navbar-icon.png" alt="navbar-img" />
-    <a class="navbar-brand" [routerLink]="['/home']">Movies Finder</a>
-
+    <div class="navbar-title">
+      <img class="navbar-img" src="./assets/navbar-icon.png" alt="navbar-img" />
+      <a class="navbar-brand" [routerLink]="['/home']">Movies Finder</a>
+    </div>
+    <div class="navbar-options">
+      <app-switch-mode></app-switch-mode>
+      <li class="multilanguage-container">
+        <select
+          class="form-control multilanguage-select"
+          #selectedLang
+          (change)="switchLang(selectedLang.value)">
+          <option
+            *ngFor="let language of translate.getLangs()"
+            [value]="language"
+            [selected]="language === translate.currentLang">
+            {{ language | flag }}
+          </option>
+        </select>
+      </li>
+    </div>
     <div class="navbar-collapse">
       <div class="d-flex">
         <input
@@ -15,19 +32,6 @@
         <button (click)="searchFilm(txtSearch.value)" class="search-button" type="submit">
           {{ 'NAVBAR_SEARCH' | translate }}
         </button>
-        <li class="multilanguage-container">
-          <select
-            class="form-control multilanguage-select"
-            #selectedLang
-            (change)="switchLang(selectedLang.value)">
-            <option
-              *ngFor="let language of translate.getLangs()"
-              [value]="language"
-              [selected]="language === translate.currentLang">
-              {{ language | flag }}
-            </option>
-          </select>
-        </li>
       </div>
     </div>
   </div>

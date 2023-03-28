@@ -42,7 +42,7 @@ export class FilmsService {
       return of([]);
     }
     this.loading = true;
-    //increment moviesListingPage in each get call
+    //increment moviesListingPage in each get call (each time you scroll 1200px)
     return this.http
       .get<MoviesListingResponse>(`${this.baseUrl}/discover/movie`, { params: this.params })
       .pipe(
