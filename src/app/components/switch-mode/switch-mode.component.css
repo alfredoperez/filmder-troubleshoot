@@ -41,9 +41,3 @@ label {
   opacity: 1;
   transform: translateX(-21px);
 }
-
-/*  
- #switch-button:checked ~ .content{
-   background:black;
-   color:white;
- } */

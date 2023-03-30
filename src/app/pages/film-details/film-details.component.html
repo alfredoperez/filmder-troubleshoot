@@ -5,7 +5,7 @@
   </div>
   <div class="col-md-6">
     <!-- Detalle -->
-    <h3>{{ film.title }}</h3>
+    <h3 class="light-elem">{{ film.title }}</h3>
     <div class="row mb-3">
       <div class="col">
         <star-rating
@@ -17,13 +17,13 @@
           [readOnly]="true"></star-rating>
       </div>
       <div class="col">
-        {{ film.vote_average | number : '1.1-2' }}
+        <p class="light-elem">{{ film.vote_average | number : '1.1-2' }}</p>
       </div>
     </div>
 
     <div class="row">
       <div class="col">
-        {{ film.overview }}
+        <p class="light-elem">{{ film.overview }}</p>
       </div>
     </div>
 
