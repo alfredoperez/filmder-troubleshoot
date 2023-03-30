@@ -1,0 +1,43 @@
+.switch-container {
+  margin: 0 0.5rem 0 1rem;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+label {
+  border: 2px solid gray;
+  border-radius: 30px;
+  padding: 0px 4px;
+  cursor: pointer;
+}
+
+.fa-moon-o {
+  color: white;
+  font-size: 21px;
+  padding: 0.375rem 0.125rem 0.375rem 0;
+  text-shadow: 0px 0px 20px white;
+  transform: translateX(21px);
+  transition: 0.3s;
+}
+
+.fa-sun-o {
+  color: orange;
+  font-size: 21px;
+  padding: 0.375rem 0 0.375rem 0.125rem;
+  text-shadow: 0px 0px 20px orange;
+  transform: translateX(0px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#switch-button:checked ~ label > .fa-moon-o {
+  opacity: 0;
+  transform: translateX(0px);
+}
+
+#switch-button:checked ~ label > .fa-sun-o {
+  opacity: 1;
+  transform: translateX(-21px);
+}

@@ -12,6 +12,7 @@ import { FilmsPosterGridComponent } from './films-poster-grid/films-poster-grid.
 import { PipesModule } from '../pipes/pipes.module';
 import { CastSlideshowComponent } from './cast-slideshow/cast-slideshow.component';
 import { LoaderComponent } from './loader/loader.component';
+import { SwitchModeComponent } from './switch-mode/switch-mode.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoaderComponent } from './loader/loader.component';
     FilmsPosterGridComponent,
     CastSlideshowComponent,
     LoaderComponent,
+    SwitchModeComponent,
   ],
   imports: [
     CommonModule,
