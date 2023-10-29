@@ -14,11 +14,9 @@ export class SwitchModeComponent {
     const isChecked = event.target.checked;
 
     if (isChecked) {
-      console.log('add light-theme class');
-      this.body.classList.add('light-theme');
-    } else {
-      console.log('remove light-theme class');
       this.body.classList.remove('light-theme');
+    } else {
+      this.body.classList.add('light-theme');
     }
   }
 }
