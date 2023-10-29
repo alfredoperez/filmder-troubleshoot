@@ -17,25 +17,14 @@ h3 {
   margin-top: 4px;
 }
 
-.poster-card{
+.poster-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.poster-card:hover{
-  animation: moved 0.8s ease-in-out;
-}
-
-@keyframes moved {
-  0%{
-      transform: scale(1);
-  }
-  50%{
-      transform: scale(1.1);
-  }
-  100%{
-      transform: scale(1);
-  }
+.poster-card:hover {
+  transform: scale(1.05);
 }
