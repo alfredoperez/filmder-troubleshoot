@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { StarRatingModule } from 'angular-star-rating';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
@@ -13,6 +12,7 @@ import { PipesModule } from '../pipes/pipes.module';
 import { CastSlideshowComponent } from './cast-slideshow/cast-slideshow.component';
 import { LoaderComponent } from './loader/loader.component';
 import { SwitchModeComponent } from './switch-mode/switch-mode.component';
+import { RatingDecimalModule } from './rating-decimal/rating-decimal.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { SwitchModeComponent } from './switch-mode/switch-mode.component';
     CommonModule,
     RouterModule,
     PipesModule,
-    StarRatingModule.forRoot(),
+    RatingDecimalModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,

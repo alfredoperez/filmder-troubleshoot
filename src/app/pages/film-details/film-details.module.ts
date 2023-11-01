@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { FilmDetailsComponent } from './film-details.component';
 import { FilmDetailsRoutingModule } from './film-details-routing.module';
-import { StarRatingModule } from 'angular-star-rating';
 import { PipesModule } from 'src/app/pipes/pipes.module';
+import { RatingDecimalModule } from 'src/app/components/rating-decimal/rating-decimal.module';
 
 @NgModule({
   declarations: [FilmDetailsComponent],
@@ -13,7 +13,7 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
     ComponentsModule,
     FilmDetailsRoutingModule,
     PipesModule,
-    StarRatingModule.forRoot(),
+    RatingDecimalModule,
   ],
   exports: [],
   providers: [],
