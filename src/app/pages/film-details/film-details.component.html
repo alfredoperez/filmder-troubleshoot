@@ -5,19 +5,19 @@
   </div>
   <div class="col-md-6">
     <!-- Detalle -->
-    <h3 class="light-elem">{{ film.title }}</h3>
+    <h3 class="light-text">{{ film.title }}</h3>
     <div class="row mb-3">
       <div class="col">
         <rating-decimal [rate]="film.vote_average"></rating-decimal>
       </div>
       <div class="col">
-        <p class="light-elem">{{ film.vote_average | number : '1.1-2' }}</p>
+        <p class="light-text">{{ film.vote_average | number : '1.1-2' }}</p>
       </div>
     </div>
 
     <div class="row">
       <div class="col">
-        <p class="light-elem">{{ film.overview }}</p>
+        <p class="light-text">{{ film.overview }}</p>
       </div>
     </div>
 

@@ -9,14 +9,31 @@
 
 body {
   background-color: #14161e;
-  &.light-theme {
-    background-color: #ebe8e5;
-  }
 }
 
-.light-theme .light-elem {
+/* light theme styles in app start */
+
+body.light-theme {
+  background-color: #ebe8e5;
+}
+
+.light-theme .light-text {
   color: #14161e;
 }
+
+.light-theme .navbar-brand {
+  color: rgb(3, 119, 28) !important;
+}
+
+.light-theme .search-button {
+  color: rgb(6, 189, 128) !important;
+  background: #14161ee3 !important;
+}
+
+.light-theme .multilanguage-select {
+  background-color: #14161ee3 !important;
+}
+/* light theme styles in app end */
 
 h1,
 h2,
@@ -38,11 +55,6 @@ p {
 
 hr {
   color: white;
-}
-
-.navbar-brand {
-  font-weight: 200;
-  color: #bd4c5f !important;
 }
 
 .btn-outline-success {
