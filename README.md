@@ -23,18 +23,25 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Convert JSON to interface
+
 Using the [page](https://app.quicktype.io/) and select typescript language and interfaces only.
 
 ## Deploy app
+
 Run the command `ng build --output-path docs --base-href filmder` to get the build and push to the repository to update the app
 
 ## Libraries
+
 - Using the slider of this [page](https://swiperjs.com/get-started).
 
-- star-rating library [documentation](https://github.com/BioPhoton/angular-star-rating) and customize [styles](https://github.com/BioPhoton/angular-star-rating/wiki/Customizing-Styles)
+- star-rating gets from ngb-rating in ng-bootstrap library
 
-- translate library [documentation](https://github.com/ngx-translate/core) 
+- translate library [documentation](https://github.com/ngx-translate/core)
 
 ## API movies documentation
+
 https://developers.themoviedb.org/3/getting-started/introduction
 
+## ESLint + Prettier + Husky + Gitflow configuration documentation
+
+https://mugan86.medium.com/eslint-prettier-husky-gitflow-in-angular-758afd79947e

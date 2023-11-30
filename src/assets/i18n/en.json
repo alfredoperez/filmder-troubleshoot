@@ -5,6 +5,10 @@
   "HOME_TITLE": "Trending Movies",
   "SEARCH_TITLE": "Search movies of:",
 
+  "GENRES_TITLE": "Genres:",
+  "PREMIERE_TITLE": "Premiere:",
+  "DURATION_TITLE": "Duration:",
+
   "FILM-DETAILS_BACK": "Back to Home",
 
   "NOT-FOUND_TITLE": "This Page is Lost in <span>Space</span>",
