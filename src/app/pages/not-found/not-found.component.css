@@ -1,4 +1,4 @@
-.not-found-container{
+.not-found-container {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -6,54 +6,40 @@
   align-items: center;
 }
 
-.not-found-description{
+.not-found-description {
   margin: 1rem;
   text-align: justify;
 }
 
-.not-found-title{
+.not-found-title {
   font-weight: bold;
 }
 
-.not-found-image{
+.not-found-image {
   width: 350px;
-  height: auto
+  height: auto;
 }
 
 .not-found-button {
-  --green: #1BFD9C;
-  font-size: 15px;
-  padding: 0.7em 2.7em 0.7em 1.7em;
-  margin-bottom: 1rem;
-  letter-spacing: 0.06em;
-  position: relative;
-  font-family: inherit;
-  border-radius: 0.6em;
-  overflow: hidden;
+  font-size: 16px;
+  padding: 1em 1.6em;
+  cursor: pointer;
+  transform: perspective(200px) rotateX(15deg);
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, var(--dark-blue) 0%, var(--light-blue) 100%);
+  box-shadow: rgba(63, 94, 251, 0.2) 0px 20px 14px 0px;
+  will-change: transform;
   transition: all 0.3s;
-  line-height: 1.4em;
-  border: 2px solid var(--green);
-  background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
-  color: var(--green);
-  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
- }
- 
- .not-found-button:hover {
-  color: #82ffc9;
-  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
- }
- 
- .not-found-button:before {
-  content: "";
-  position: absolute;
-  left: -4em;
-  width: 4em;
-  height: 100%;
-  top: 0;
-  transition: transform .4s ease-in-out;
-  background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
- }
- 
- .not-found-button:hover:before {
-  transform: translateX(15em);
- }
+  border-bottom: 2px solid var(--light-blue);
+}
+
+.not-found-button:hover {
+  transform: perspective(180px) rotateX(30deg) translateY(2px);
+}
+
+.not-found-button:active {
+  transform: perspective(170px) rotateX(36deg) translateY(5px);
+}

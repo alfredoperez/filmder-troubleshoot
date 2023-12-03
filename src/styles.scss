@@ -1,6 +1,14 @@
 /* star-rating css start */
 @import '~css-star-rating/scss/star-rating';
 
+:root {
+  --dark-blue: rgba(63, 94, 251);
+  --light-blue: rgba(70, 135, 252);
+  /* blues to light-theme */
+  --dark-blue-op: rgba(63, 94, 251, 0.8);
+  --light-blue-op: rgba(70, 135, 252, 0.8);
+}
+
 .rating {
   justify-content: start;
   overflow: hidden;
@@ -22,16 +30,21 @@ body.light-theme {
 }
 
 .light-theme .navbar-brand {
-  color: rgb(3, 119, 28) !important;
+  color: var(--light-blue-op) !important;
 }
 
 .light-theme .search-button {
-  color: rgb(6, 189, 128) !important;
+  color: var(--light-blue-op) !important;
   background: #14161ee3 !important;
 }
 
 .light-theme .multilanguage-select {
-  background-color: #14161ee3 !important;
+  border-color: var(--light-blue-op) !important;
+  background: #14161ee3 !important;
+}
+
+.light-theme .filled {
+  color: rgb(212, 212, 4) !important;
 }
 /* light theme styles in app end */
 
@@ -46,7 +59,7 @@ h5 {
 
 span {
   font-weight: bolder;
-  color: rgb(24 161 106);
+  color: var(--dark-blue-op);
 }
 
 p {

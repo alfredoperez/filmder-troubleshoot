@@ -1,17 +1,17 @@
-.swiper-wrapper{
+.swiper-wrapper {
   color: white;
 }
 
-.actor-link{
+.actor-link {
   text-decoration: none;
   color: white;
 }
 
-.actor-link:hover{
+.actor-link:hover {
   opacity: 0.6;
 }
 
-.img-thumbnail:hover{
-  background-color: rgba(27, 253, 156, 0.6);
+.img-thumbnail:hover {
+  background-color: var(--light-blue-op);
   border: none;
 }

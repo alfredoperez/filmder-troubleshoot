@@ -10,3 +10,27 @@
 .badge {
   font-style: normal;
 }
+
+.back-button {
+  font-size: 16px;
+  padding: 1em 1.6em;
+  cursor: pointer;
+  transform: perspective(200px) rotateX(15deg);
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(0deg, var(--dark-blue) 0%, var(--light-blue) 100%);
+  box-shadow: rgba(63, 94, 251, 0.2) 0px 20px 14px 0px;
+  will-change: transform;
+  transition: all 0.3s;
+  border-bottom: 2px solid var(--light-blue);
+}
+
+.back-button:hover {
+  transform: perspective(180px) rotateX(30deg) translateY(2px);
+}
+
+.back-button:active {
+  transform: perspective(170px) rotateX(36deg) translateY(5px);
+}
