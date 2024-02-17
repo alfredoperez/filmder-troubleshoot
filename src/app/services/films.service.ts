@@ -47,6 +47,12 @@ export class FilmsService {
       .get<MoviesListingResponse>(`${this.baseUrl}/discover/movie`, { params: this.params })
       .pipe(
         map((response) => response.results),
+        map((movies) =>
+          movies.map((movie) => ({
+            ...movie,
+            viewTransitionImg: `view-transition-name: ${movie.poster_path.slice(1, -4)}`,
+          }))
+        ),
         tap(() => {
           this.moviesListingPage += 1;
           this.loading = false;

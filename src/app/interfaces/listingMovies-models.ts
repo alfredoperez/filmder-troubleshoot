@@ -24,6 +24,7 @@ export interface Movie {
   release_date: Date;
   title: string;
   video: boolean;
+  viewTransitionImg: string;
   vote_average: number;
   vote_count: number;
 }

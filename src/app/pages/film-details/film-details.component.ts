@@ -17,6 +17,7 @@ export class FilmDetailsComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
   public film!: MovieDetailsResponse;
   public cast: Cast[] = [];
+  public viewTransitionImg: string = '';
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -43,7 +44,7 @@ export class FilmDetailsComponent implements OnInit, OnDestroy {
         this.filmsService.getFilmDetails(id),
         this.filmsService.getFilmCasting(id),
       ]).subscribe(([film, cast]) => {
-        console.log({ film, cast });
+        this.viewTransitionImg = `view-transition-name: ${film.poster_path.slice(1, -4)}`;
         if (!film) {
           this.router.navigate(['/home']);
           return;

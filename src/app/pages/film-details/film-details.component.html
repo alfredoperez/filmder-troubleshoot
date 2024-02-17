@@ -1,7 +1,12 @@
 <div class="row film-details" *ngIf="film">
   <div class="col-md-6 my-3">
     <!-- Imagen -->
-    <img [src]="film.poster_path | poster" [alt]="film.title" class="img-thumbnail" />
+    <!-- TODO: Transition view img -->
+    <img
+      [src]="film.poster_path | poster"
+      [alt]="film.title"
+      class="img-thumbnail"
+      [style]="viewTransitionImg" />
   </div>
   <div class="col-md-6">
     <!-- Detalle -->

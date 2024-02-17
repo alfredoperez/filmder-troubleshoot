@@ -45,3 +45,7 @@ https://developers.themoviedb.org/3/getting-started/introduction
 ## ESLint + Prettier + Husky + Gitflow configuration documentation
 
 https://mugan86.medium.com/eslint-prettier-husky-gitflow-in-angular-758afd79947e
+
+## Configuration
+
+Angular version 17 needs a node version >= 18
