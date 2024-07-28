@@ -1,13 +1,24 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  Component,
+  HostListener,
+  NO_ERRORS_SCHEMA,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { Movie } from 'src/app/interfaces/listingMovies-models';
 import { FilmsService } from 'src/app/services/films.service';
 
 @Component({
+  standalone: true,
+  imports: [TranslateModule, CommonModule],
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
