@@ -9,12 +9,13 @@ import {
 } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { ComponentsModule } from 'src/app/components/components.module';
 import { Movie } from 'src/app/interfaces/listingMovies-models';
 import { FilmsService } from 'src/app/services/films.service';
 
 @Component({
   standalone: true,
-  imports: [TranslateModule, CommonModule],
+  imports: [CommonModule, TranslateModule, ComponentsModule],
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
